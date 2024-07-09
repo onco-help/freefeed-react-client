@@ -223,7 +223,7 @@ describe('Post', () => {
       createdBy: protectedAuthor,
     });
     expect(screen.getByLabelText(/Protected post/)).toBeInTheDocument();
-    expect(screen.getByTitle(/This entry is only visible to FreeFeed users/)).toBeInTheDocument();
+    expect(screen.getByTitle(/This entry is only visible to OncoHelp users/)).toBeInTheDocument();
   });
 
   it('Renders a post as protected because all of its recipients are protected', () => {
@@ -242,7 +242,7 @@ describe('Post', () => {
       createdBy: protectedAuthor,
     });
     expect(screen.getByLabelText(/Protected post/)).toBeInTheDocument();
-    expect(screen.getByTitle(/This entry is only visible to FreeFeed users/)).toBeInTheDocument();
+    expect(screen.getByTitle(/This entry is only visible to OncoHelp users/)).toBeInTheDocument();
   });
 
   it('Renders a post as private because its author is private', () => {

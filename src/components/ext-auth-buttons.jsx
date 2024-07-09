@@ -15,7 +15,7 @@ export const SIGN_UP = 'sign-up';
  * Facebook Container (https://addons.mozilla.org/ru/firefox/addon/facebook-container/) is a
  * Firefox extension authored and promoted by Mozilla that isolates Facebook and all its domains
  * in a separate container. Because of this extension it is not possible to sign in via Facebook
- * unless the FreeFeed site is in the same container. The following code contains some hacks to
+ * unless the OncoHelp site is in the same container. The following code contains some hacks to
  * indicate this situation to user.
  */
 

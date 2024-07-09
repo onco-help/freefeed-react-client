@@ -236,7 +236,7 @@ exports[`UserProfileHead > Renders an error message if user is not found 1`] = `
       <strong>
         freefeed
       </strong>
-       is not found on FreeFeed
+       is not found on OncoHelp
     </div>
   </div>
 </DocumentFragment>

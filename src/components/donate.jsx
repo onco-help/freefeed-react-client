@@ -46,11 +46,11 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
         <section className={styles.main} lang={lang}>
           {lang === 'en' ? (
             <>
-              <h3 className={styles.header}>Donate to FreeFeed</h3>
+              <h3 className={styles.header}>Donate to OncoHelp</h3>
               <p>
-                FreeFeed is funded by voluntary donations from its users. These donations are the
-                only source of income for FreeFeed as it has no sponsors and doesn&apos;t run ads.
-                FreeFeed uses this money to pay for its hosting, development, and administration.
+                OncoHelp is funded by voluntary donations from its users. These donations are the
+                only source of income for OncoHelp as it has no sponsors and doesn&apos;t run ads.
+                OncoHelp uses this money to pay for its hosting, development, and administration.
               </p>
               <ul>
                 {cfg.reportsAccount && (
@@ -62,13 +62,13 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                 )}
                 <li>
                   <a
-                    href="https://ariregister.rik.ee/eng/company/80385994/FreeFeednet-MT%C3%9C?lang=en"
+                    href="https://ariregister.rik.ee/eng/company/80385994/OncoHelpnet-MT%C3%9C?lang=en"
                     target="_blank"
                     rel="noreferrer noopwener"
                   >
-                    Read about FreeFeed.net MTÜ
+                    Read about OncoHelp.net MTÜ
                   </a>
-                  , the non-profit organisation that maintains FreeFeed.net
+                  , the non-profit organisation that maintains OncoHelp.net
                 </li>
 
                 {statusText && (
@@ -92,7 +92,7 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                         Our expenses fall into three main categories: hosting expenses,
                         administration expenses such as banking and accounting fees, and expenses
                         for development of new features. We also use the term &quot;reserve
-                        fund&quot; to describe the amount of money that we need to run FreeFeed for
+                        fund&quot; to describe the amount of money that we need to run OncoHelp for
                         a year, including hosting and administration expenses. As of February of
                         2022, this amount is 1300 EUR.
                       </p>
@@ -130,7 +130,7 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                         </li>
                         <li>
                           <strong>Critical</strong> means that we only have enough money left in our
-                          reserves to run FreeFeed for a few months, and our future is at risk.
+                          reserves to run OncoHelp for a few months, and our future is at risk.
                         </li>
                       </ul>
                     </section>
@@ -139,7 +139,7 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
               </ul>
 
               <p className={styles.plea}>
-                Your support is vital for FreeFeed. You can support us by making a one-time or a
+                Your support is vital for OncoHelp. You can support us by making a one-time or a
                 recurring monthly donation. Thank you!{' '}
                 <Icon icon={faHeart} className={styles.like} />
               </p>
@@ -338,13 +338,13 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                 )}
                 <li>
                   <a
-                    href="https://ariregister.rik.ee/eng/company/80385994/FreeFeednet-MT%C3%9C?lang=en"
+                    href="https://ariregister.rik.ee/eng/company/80385994/OncoHelpnet-MT%C3%9C?lang=en"
                     target="_blank"
                     rel="noreferrer noopwener"
                   >
-                    Читать о FreeFeed.net MTÜ
+                    Читать о OncoHelp.net MTÜ
                   </a>
-                  , некоммерческой организации волонтёров, поддерживающих FreeFeed.net
+                  , некоммерческой организации волонтёров, поддерживающих OncoHelp.net
                 </li>
 
                 {statusText && (
@@ -365,7 +365,7 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                       hidden={!fundingStatusDetailsOpened}
                     >
                       <p>
-                        Расходы FreeFeed сводятся к трем основным категориям: затраты на хостинг,
+                        Расходы OncoHelp сводятся к трем основным категориям: затраты на хостинг,
                         организационные расходы (банк, бухгалтер) и расходы на разработку новых
                         возможностей. Кроме того, есть понятие “резервный фонд”, который содержит
                         достаточное количество денег, чтобы оплачивать год хостинга и
@@ -404,7 +404,7 @@ export default function Donate({ donationAccountName = cfg.statusAccount }) {
                         </li>
                         <li>
                           <strong>Critical</strong> означает, что в резервном фонде осталось денег
-                          на несколько месяцев, и дальнейшее существование FreeFeed под угрозой.
+                          на несколько месяцев, и дальнейшее существование OncoHelp под угрозой.
                         </li>
                       </ul>
                     </section>

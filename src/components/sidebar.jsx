@@ -148,7 +148,7 @@ const SideBarFriends = ({ user }) => {
   );
 };
 
-const SideBarFreeFeed = () => (
+const SideBarOncoHelp = () => (
   <div className="box" role="navigation">
     <div className="box-header-freefeed" role="heading">
       <Link to="/freefeed">{CONFIG.siteTitle}</Link>
@@ -169,7 +169,7 @@ const SideBarFreeFeed = () => (
         </li>
         <li>
           <Link to="/support">Support</Link> /{' '}
-          <a href="https://github.com/FreeFeed/freefeed-server/wiki/FAQ" target="_blank">
+          <a href="https://github.com/OncoHelp/freefeed-server/wiki/FAQ" target="_blank">
             FAQ
           </a>
         </li>
@@ -195,66 +195,6 @@ const SideBarGroups = () => {
       </div>
       <div className="box-footer">
         <Link to="/groups">Browse/edit groups</Link>
-      </div>
-    </div>
-  );
-};
-
-const SideBarBookmarklet = () => (
-  <div className="box" role="region">
-    <div className="box-header-groups" role="heading">
-      Bookmarklet
-    </div>
-    <div className="box-footer">
-      Once added to your toolbar, this button will let you share web pages on {CONFIG.siteTitle}.
-      You can even attach thumbnails of images from the page you share!
-    </div>
-    <div className="box-footer">
-      Click and drag{' '}
-      <span
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{
-          __html: `<a class="bookmarklet-button" href="${htmlSafe(
-            bookmarkletHref(),
-          )}" onclick="return false">Share on ${CONFIG.siteTitle}</a>`,
-        }}
-      />{' '}
-      to&nbsp;your toolbar.
-    </div>
-    <div className="box-footer">
-      There is also a{' '}
-      <a href="https://chrome.google.com/webstore/detail/share-on-freefeed/dngijpbccpnbjlpjomjmlppfgmnnilah">
-        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>Chrome Extension</span>
-      </a>{' '}
-      for sharing on {CONFIG.siteTitle}.
-    </div>
-  </div>
-);
-
-const SideBarArchive = ({ user }) => {
-  if (!user || !user.privateMeta) {
-    return null;
-  }
-  const { archives } = user.privateMeta;
-  if (
-    !user ||
-    !user.privateMeta ||
-    !archives ||
-    (archives.recovery_status === 2 && archives.restore_comments_and_likes)
-  ) {
-    return null;
-  }
-  return (
-    <div className="box" role="navigation">
-      <div className="box-header-groups" role="heading">
-        FriendFeed.com Archives
-      </div>
-      <div className="box-body">
-        <ul>
-          <li>
-            <Link to="/settings/archive">Restore your archive!</Link>
-          </li>
-        </ul>
       </div>
     </div>
   );
@@ -353,9 +293,7 @@ export default function SideBar({ user, signOut }) {
           <SideBarFriends user={user} />
           <SideBarGroups />
           <SideBarArchive user={user} />
-          <SideBarFreeFeed />
-          <SideBarBookmarklet />
-          <SideBarMemories />
+          <SideBarOncoHelp />
           <DonationWidget />
           <SideBarAppearance />
         </ErrorBoundary>

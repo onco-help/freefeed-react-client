@@ -9,8 +9,8 @@ describe('parse-text', () => {
   describe('isLocalLink', () => {
     const testData = [
       { url: 'https://freefeed.net/some/path', result: true },
-      { url: 'hTTps://FreeFeed.net/some/path', result: true },
-      { url: 'https://github.com/FreeFeed', result: false },
+      { url: 'hTTps://OncoHelp.net/some/path', result: true },
+      { url: 'https://github.com/OncoHelp', result: false },
       { url: 'https://freefeed.net', result: true },
       { url: 'https://omega.freefeed.net', result: false },
       { url: 'https://omega.freefeed.net/', result: false },

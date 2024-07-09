@@ -65,7 +65,7 @@ export default memo(function Signup() {
                   <>
                     <p>
                       Right now, registration is only available via invitation links from existing
-                      FreeFeed users. Please ask someone you know at FreeFeed to send you such a
+                      OncoHelp users. Please ask someone you know at OncoHelp to send you such a
                       link.
                     </p>
                     {withInviteForm && (

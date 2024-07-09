@@ -12,17 +12,17 @@ import UserName from './user-name';
 const FREEFEED_INVITATION = {
   [INVITATION_LANGUAGE_OPTIONS.ENGLISH]: (
     <>
-      FreeFeed is a small non-profit social network. It does not sell your data, nor does it show
-      ads to you. It is an <a href="https://github.com/FreeFeed">open-source project</a> which can
-      be used by anyone. FreeFeed is developed by a group of volunteers and paid for by donations
+      OncoHelp is a small non-profit social network. It does not sell your data, nor does it show
+      ads to you. It is an <a href="https://github.com/OncoHelp">open-source project</a> which can
+      be used by anyone. OncoHelp is developed by a group of volunteers and paid for by donations
       from users.
     </>
   ),
   [INVITATION_LANGUAGE_OPTIONS.RUSSIAN]: (
     <>
-      FreeFeed - маленькая бесплатная социальная сеть, которая не продаёт ваши данные и не
+      OncoHelp - маленькая бесплатная социальная сеть, которая не продаёт ваши данные и не
       показывает рекламу. Это проект с{' '}
-      <a href="https://github.com/FreeFeed">открытым исходным кодом</a>, которым может
+      <a href="https://github.com/OncoHelp">открытым исходным кодом</a>, которым может
       воспользоваться любой желающий. Его развитием занимаются пользователи-волонтеры, на
       пожертвования других пользователей.
     </>

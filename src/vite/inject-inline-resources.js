@@ -6,7 +6,7 @@ import { HTMLElement, parse as parseHTML } from 'node-html-parser';
  * Injects into HTML page all scripts with type="inject" (as IIFE) and all
  * styles.
  *
- * This plugin is FreeFeed-specific and not intended for general use.
+ * This plugin is OncoHelp-specific and not intended for general use.
  */
 export function injectInlineResources() {
   return {

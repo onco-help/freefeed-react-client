@@ -6,15 +6,16 @@ RUN apt-get update && \
     git \
     make
 
-ADD . /client
 WORKDIR /client
+ADD . /client 
 
 RUN rm -rf node_modules && \
     rm -f log/*.log && \
     yarn install && \
     yarn build-prod
 
-FROM scratch
+FROM nginx:1.27
 
-COPY --from=builder /client/_dist /var/www/freefeed-react-client
-VOLUME /var/www/freefeed-react-client
+COPY --from=builder /client/_dist /usr/share/nginx/html
+COPY config.json /usr/share/nginx/html/config.json
+VOLUME /usr/share/nginx/html

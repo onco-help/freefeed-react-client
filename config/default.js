@@ -9,7 +9,7 @@ export default {
     root: 'https://candy.freefeed.net',
   },
 
-  siteTitle: 'FreeFeed',
+  siteTitle: 'OncoHelp',
 
   siteOrigin: 'http://localhost:3333',
 

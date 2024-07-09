@@ -499,7 +499,7 @@ export default function AppearanceForm() {
           <div className="checkbox">
             <label>
               <CheckboxInput field={enableBeta} />
-              Use the beta version of FreeFeed frontend
+              Use the beta version of OncoHelp frontend
             </label>
             <p className="help-block">
               The beta version has the latest new features, but it may be unstable. Please use it

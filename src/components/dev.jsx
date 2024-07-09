@@ -6,10 +6,10 @@ function Dev() {
     <div className="box">
       <div className="box-header-timeline" />
       <div className="box-body">
-        <h3>Help us build FreeFeed</h3>
+        <h3>Help us build OncoHelp</h3>
 
         <p>
-          We are looking for volunteers to help us build FreeFeed, an open-source social network,
+          We are looking for volunteers to help us build OncoHelp, an open-source social network,
           replacement of FriendFeed.com.
         </p>
 
@@ -22,15 +22,15 @@ function Dev() {
         </p>
 
         <p>
-          FreeFeed is open-source:{' '}
-          <a href="https://github.com/FreeFeed/" target="_blank">
-            https://github.com/FreeFeed/
+          OncoHelp is open-source:{' '}
+          <a href="https://github.com/OncoHelp/" target="_blank">
+            https://github.com/OncoHelp/
           </a>
         </p>
 
         <p>
           The{' '}
-          <a href="https://github.com/FreeFeed/freefeed-server" target="_blank">
+          <a href="https://github.com/OncoHelp/freefeed-server" target="_blank">
             backend
           </a>{' '}
           is built with Node.js and PostgreSQL.
@@ -38,7 +38,7 @@ function Dev() {
 
         <p>
           The{' '}
-          <a href="https://github.com/FreeFeed/freefeed-react-client" target="_blank">
+          <a href="https://github.com/OncoHelp/freefeed-react-client" target="_blank">
             frontend
           </a>{' '}
           is built with React.

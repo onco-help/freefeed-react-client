@@ -414,7 +414,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - "Everything", "Search" and "Best of" pages are not available for
   non-authorized users.
-- Updated texts about donations to FreeFeed MTÜ
+- Updated texts about donations to OncoHelp MTÜ
 
 ## [1.112] - 2022-11-25
 ### Added
@@ -652,7 +652,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Group admins now can remove a post from one group at a time
-  ([#1398](https://github.com/FreeFeed/freefeed-react-client/issues/1398))
+  ([#1398](https://github.com/OncoHelp/freefeed-react-client/issues/1398))
 
 ## [1.99.1] - 2021-07-03
 ### Fixed
@@ -695,7 +695,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the client makes a HEAD request every 5 minutes (configurable) to the specific
   address ("/version.txt" is recommended) and looks for the specific response header
   ("Last-Modified" by default). When the header value is changed, the information bar is
-  shown to the user: “There’s a new update for FreeFeed available!
+  shown to the user: “There’s a new update for OncoHelp available!
   _Refresh_the_page_ when you are ready.”
 - Confirmation dialog when the private user wants to unsubscribe someone from
   himself.
@@ -768,7 +768,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - The numbers of likes of omitted comments now updates in the real time.
 - The posts and comments data now fully rewrites on feed update. It has been
-  broken in recent releases and click on FreeFeed logo wasn't collapse expanded
+  broken in recent releases and click on OncoHelp logo wasn't collapse expanded
   comments and likes
 
 ### Changed
@@ -918,7 +918,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - A 'Not Found' page for URI's that does not match any of the site routes.
 - A &lt;spoiler> tag for the sensitive or spoiler texts.
-- Support for FreeFeed's Supervisory Board 2020 election
+- Support for OncoHelp's Supervisory Board 2020 election
 
 ### Changed
 - Applied some rendering optimisations

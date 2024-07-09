@@ -2,14 +2,14 @@ const Terms = () => (
   <div className="box">
     <div className="box-header-timeline" />
     <div className="box-body">
-      <h3>FreeFeed Terms of Service (&quot;Terms&quot;)</h3>
+      <h3>OncoHelp Terms of Service (&quot;Terms&quot;)</h3>
 
       <p>Last updated: April 9, 2024</p>
 
       <p>
         Please read these Terms of Service (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully
         before using the <a href="https://freefeed.net">https://freefeed.net</a> website (the
-        &quot;Service&quot;) operated by FreeFeed MT&Uuml; (&quot;us&quot;, &quot;we&quot;, or
+        &quot;Service&quot;) operated by OncoHelp MT&Uuml; (&quot;us&quot;, &quot;we&quot;, or
         &quot;our&quot;).
       </p>
 
@@ -25,12 +25,12 @@ const Terms = () => (
       </p>
 
       <p>
-        FreeFeed reserves the right to change these Terms at any time. We recommend that you
+        OncoHelp reserves the right to change these Terms at any time. We recommend that you
         periodically check this Site for changes.
       </p>
 
       <p>
-        We reserve rights to monitor publicly available information posted on FreeFeed and
+        We reserve rights to monitor publicly available information posted on OncoHelp and
         proactively remove accounts that are used for the sole purpose of spam.
       </p>
 
@@ -41,7 +41,7 @@ const Terms = () => (
         Service.
       </p>
 
-      <p>FreeFeed reserves the right to refuse service to anyone for any reason at any time.</p>
+      <p>OncoHelp reserves the right to refuse service to anyone for any reason at any time.</p>
 
       <h3>Content</h3>
 
@@ -64,7 +64,7 @@ const Terms = () => (
         display such Content (in whole or in part) on the Service solely for the purpose of
         displaying, hosting, providing access to, distributing, and promoting your posts, comments
         and other Content. This license exists only for as long as you elect to continue to include
-        such Content on the Service and will terminate at the time you remove or FreeFeed MT&Uuml;
+        such Content on the Service and will terminate at the time you remove or OncoHelp MT&Uuml;
         removes such Content from the Service.
       </p>
 
@@ -98,23 +98,23 @@ const Terms = () => (
 
       <p>
         The Service and its original content (excluding Content provided by users), features and
-        functionality are and will remain the exclusive property of FreeFeed MT&Uuml; and its
+        functionality are and will remain the exclusive property of OncoHelp MT&Uuml; and its
         licensors. The Service is protected by copyright, trademark, and other laws of both Estonia
         and foreign countries. Our trademarks and trade dress may not be used in connection with any
-        product or service without the prior written consent of FreeFeed MT&Uuml;.
+        product or service without the prior written consent of OncoHelp MT&Uuml;.
       </p>
 
       <h3>Links To Other Web Sites</h3>
 
       <p>
         Our Service may contain links to third-party web sites or services that are not owned or
-        controlled by FreeFeed MT&Uuml;.
+        controlled by OncoHelp MT&Uuml;.
       </p>
 
       <p>
-        FreeFeed MT&Uuml; has no control over, and assumes no responsibility for, the content,
+        OncoHelp MT&Uuml; has no control over, and assumes no responsibility for, the content,
         privacy policies, or practices of any third party web sites or services. You further
-        acknowledge and agree that FreeFeed MT&Uuml; shall not be responsible or liable, directly or
+        acknowledge and agree that OncoHelp MT&Uuml; shall not be responsible or liable, directly or
         indirectly, for any damage or loss caused or alleged to be caused by or in connection with
         use of or reliance on any such content, goods or services available on or through any such
         web sites or services.
@@ -128,7 +128,7 @@ const Terms = () => (
       <h3>Limitation Of Liability</h3>
 
       <p>
-        In no event shall FreeFeed MT&Uuml;, nor its directors, employees, partners, agents,
+        In no event shall OncoHelp MT&Uuml;, nor its directors, employees, partners, agents,
         suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or
         punitive damages, including without limitation, loss of profits, data, use, goodwill, or
         other intangible losses, resulting from (i) your access to or use of or inability to access
@@ -151,7 +151,7 @@ const Terms = () => (
       </p>
 
       <p>
-        FreeFeed MT&Uuml;, its subsidiaries, affiliates, and its licensors do not warrant that a)
+        OncoHelp MT&Uuml;, its subsidiaries, affiliates, and its licensors do not warrant that a)
         the Service will function uninterrupted, secure or available at any particular time or
         location; b) any errors or defects will be corrected; c) the Service is free of viruses or
         other harmful components; or d) the results of using the Service will meet your

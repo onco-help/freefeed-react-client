@@ -1,6 +1,6 @@
 # Usage
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FFreeFeed%2Ffreefeed-react-client.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FFreeFeed%2Ffreefeed-react-client?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOncoHelp%2Ffreefeed-react-client.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOncoHelp%2Ffreefeed-react-client?ref=badge_shield)
 
 [Node.js](https://nodejs.org) versions 16, 18, 20 are supported.
 
@@ -10,7 +10,7 @@ We use [yarn](https://yarnpkg.com/) as dependency manager (instead of npm) so yo
 
 Run `yarn start`. By default it will use our staging backend [candy.freefeed.net](https://candy.freefeed.net).
 
-Alternatively, you can install [freefeed-server](https://github.com/FreeFeed/freefeed-server) and create `config.json` file with URL of local backend:
+Alternatively, you can install [freefeed-server](https://github.com/OncoHelp/freefeed-server) and create `config.json` file with URL of local backend:
 ```
 {
   "api": {
@@ -37,4 +37,4 @@ example) you can create an empty `.no_husky` file in the root directory of proje
 
 ## License
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FFreeFeed%2Ffreefeed-react-client.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FFreeFeed%2Ffreefeed-react-client?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOncoHelp%2Ffreefeed-react-client.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOncoHelp%2Ffreefeed-react-client?ref=badge_large)

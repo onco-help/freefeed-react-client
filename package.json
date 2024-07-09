@@ -117,10 +117,10 @@
     "create_config_json": "echo \"{}\" > ./_dist/config.json",
     "postinstall": "husky install"
   },
-  "author": "FreeFeed contributors",
+  "author": "OncoHelp contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FreeFeed/freefeed-react-client.git"
+    "url": "https://github.com/OncoHelp/freefeed-react-client.git"
   },
   "license": "MIT",
   "packageManager": "yarn@4.1.1"

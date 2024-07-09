@@ -432,7 +432,7 @@ function checkPath(Component, checker) {
 }
 
 function isPostPath({ params: { postId, userName } }) {
-  // The FreeFeed's usernames can have up to 25 characters length now, but some
+  // The OncoHelp's usernames can have up to 25 characters length now, but some
   // old groups can have up to 27 characters in username
   return (
     /^[a-z\d-]{3,30}$/i.test(userName) &&
@@ -442,7 +442,7 @@ function isPostPath({ params: { postId, userName } }) {
 }
 
 function isAccountPath({ params: { userName } }) {
-  // The FreeFeed's usernames can have up to 25 characters length now, but some
+  // The OncoHelp's usernames can have up to 25 characters length now, but some
   // old grops can have up to 27 characters in username
   return /^[a-z\d-]{3,30}$/i.test(userName);
 }
