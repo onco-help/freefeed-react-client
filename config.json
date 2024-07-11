@@ -1,0 +1,55 @@
+{
+  "api": {
+    "root": "https://oh-server.c.rkd.pw"
+  },
+  "siteTitle": "OncoHelp",
+  "siteOrigin": "https://oh-client.c.rkd.pw",
+  "auth": {
+    "tokenPrefix": "oh_",
+    "userStorageKey": "USER_KEY"
+  },
+  "captcha": {
+    "siteKey": ""
+  },
+  "search": {
+    "searchEngine": null
+  },
+  "siteDomains": [
+    "oh-server.c.rkd.pw"
+  ],
+  "sentry": {
+    "publicDSN": null
+  },
+  "frontendPreferences": {
+    "clientId": "net.oh"
+  },
+  "analytics": {
+    "google": null
+  },
+  "maxLength": {
+    "post": 3000,
+    "comment": 3000,
+    "description": 1500
+  },
+  "donations": {
+    "statusAccount": null,
+    "reportsAccount": null,
+    "paymentMethods": {
+      "payPalRegularButtonId": null,
+      "payPalOneTimeButtonId": null,
+      "liberaPayProject": null,
+      "yasobeRuProject": null,
+      "boostyProject": null
+    }
+  },
+  "privacyControlGroups": {
+    "hidePosts": true,
+    "disableSubscriptions": true,
+    "groups": {
+      "noticeboard": {
+        "label": "Доска объявлений",
+        "privacy": "public"
+      }
+    }
+  }
+}
