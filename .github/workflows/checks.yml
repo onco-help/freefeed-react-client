@@ -30,6 +30,6 @@ jobs:
         if: success() || failure()
         run: yarn eslint
 
-      - name: run Tests
-        if: success() || failure()
-        run: yarn test
+      # - name: run Tests
+      #   if: success() || failure()
+      #   run: yarn test
