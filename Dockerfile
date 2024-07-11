@@ -18,4 +18,5 @@ FROM nginx:1.27
 
 COPY --from=builder /client/_dist /usr/share/nginx/html
 COPY config.json /usr/share/nginx/html/config.json
+COPY nginx.conf /etc/nginx/nginx.conf
 VOLUME /usr/share/nginx/html

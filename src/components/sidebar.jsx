@@ -292,7 +292,6 @@ export default function SideBar({ user, signOut }) {
           <LoggedInBlock user={user} signOut={signOut} />
           <SideBarFriends user={user} />
           <SideBarGroups />
-          <SideBarArchive user={user} />
           <SideBarOncoHelp />
           <DonationWidget />
           <SideBarAppearance />
