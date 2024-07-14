@@ -80,11 +80,7 @@ export default function ProfileForm() {
 
       <div className={groupErrClass(hasCancer)}>
         <label htmlFor="description-input">Has been diagnosed with cancer</label>
-        <textarea
-          id="hasCancer-input"
-          className={`form-control wider-input ${styles.hasCancer}`}
-          {...hasCancer.input}
-        />
+        <CheckboxInput field={hasCancer} disabled />
       </div>
 
       <div className="form-group">
