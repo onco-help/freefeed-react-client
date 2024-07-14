@@ -23,6 +23,7 @@ const initialValues = (extProfile) => ({
   password: '',
   captcha: null,
   subscribe: true,
+  hasCancer: false,
   connectExtProfile: true,
   importProfilePicture: true,
 });
@@ -34,60 +35,61 @@ const validate =
     emailVerificationEnabled = false,
     initialEmail = '',
   } = {}) =>
-  (values) => {
-    // Use '' to mark field as erroneous but not set a error message
-    const shouldBe = (test, message = '') => (test ? undefined : message);
+    (values) => {
+      // Use '' to mark field as erroneous but not set a error message
+      const shouldBe = (test, message = '') => (test ? undefined : message);
 
-    const errors = {};
-    errors.username = shouldBe(/^[a-z\d]{3,25}$/i.test(values.username.trim()));
-    if (USERNAME_STOP_LIST.has(values.username.trim())) {
-      errors.username = 'Reserved username. Please select another one.';
-    }
-    errors.screenname = shouldBe(/^.{3,25}$/i.test(values.screenname.trim()));
-    errors.email = shouldBe(isEmail(values.email.trim()), 'Invalid email');
+      const errors = {};
+      errors.username = shouldBe(/^[a-z\d]{3,25}$/i.test(values.username.trim()));
+      if (USERNAME_STOP_LIST.has(values.username.trim())) {
+        errors.username = 'Reserved username. Please select another one.';
+      }
+      errors.screenname = shouldBe(/^.{3,25}$/i.test(values.screenname.trim()));
+      errors.email = shouldBe(isEmail(values.email.trim()), 'Invalid email');
 
-    if (emailVerificationEnabled && values.email.trim() !== initialEmail.trim()) {
-      errors.emailCode = shouldBe(values.emailCode.replace(/\W+/g, '').length >= 6, 'Invalid code');
-    }
+      if (emailVerificationEnabled && values.email.trim() !== initialEmail.trim()) {
+        errors.emailCode = shouldBe(values.emailCode.replace(/\W+/g, '').length >= 6, 'Invalid code');
+      }
 
-    errors.password = shouldBe(
-      (withExtProfile && values.connectExtProfile) ||
+      errors.password = shouldBe(
+        (withExtProfile && values.connectExtProfile) ||
         values.password.trim().length >= CONFIG.minPasswordLength,
-    );
-    errors.captcha = shouldBe(!withCaptcha || values.captcha !== null);
+      );
+      errors.captcha = shouldBe(!withCaptcha || values.captcha !== null);
 
-    return errors;
-  };
+      return errors;
+    };
 
 const onSubmit =
   ({ dispatch, externalProfileKey, withCaptcha, invitationId, profilePictureURL }) =>
-  (values) => {
-    const reqData = {
-      username: values.username.trim(),
-      screenName: values.screenname.trim(),
-      email: values.email.trim(),
-      isProtected: Boolean(CONFIG.newUsersProtected),
-      emailVerificationCode: values.emailCode,
+    (values) => {
+      const reqData = {
+        username: values.username.trim(),
+        screenName: values.screenname.trim(),
+        email: values.email.trim(),
+        isProtected: Boolean(CONFIG.newUsersProtected),
+        emailVerificationCode: values.emailCode,
+      };
+
+      if (externalProfileKey && values.connectExtProfile) {
+        reqData.externalProfileKey = externalProfileKey;
+      } else {
+        reqData.password = values.password.trim();
+      }
+      if (withCaptcha) {
+        reqData.captcha = values.captcha;
+      }
+      if (invitationId) {
+        reqData.invitation = invitationId;
+        reqData.cancel_subscription = !values.subscribe;
+      }
+      reqData.hasCancer = values.hasCancer;
+      if (profilePictureURL && values.importProfilePicture) {
+        reqData.profilePictureURL = profilePictureURL;
+      }
+
+      dispatch(signUp(reqData));
     };
-
-    if (externalProfileKey && values.connectExtProfile) {
-      reqData.externalProfileKey = externalProfileKey;
-    } else {
-      reqData.password = values.password.trim();
-    }
-    if (withCaptcha) {
-      reqData.captcha = values.captcha;
-    }
-    if (invitationId) {
-      reqData.invitation = invitationId;
-      reqData.cancel_subscription = !values.subscribe;
-    }
-    if (profilePictureURL && values.importProfilePicture) {
-      reqData.profilePictureURL = profilePictureURL;
-    }
-
-    dispatch(signUp(reqData));
-  };
 
 export default memo(function SignupForm({ invitationId = null, lang = 'en' }) {
   const dispatch = useDispatch();
@@ -142,6 +144,7 @@ export default memo(function SignupForm({ invitationId = null, lang = 'en' }) {
   const password = useField('password', form.form);
   const captcha = useField('captcha', form.form);
   const subscribe = useField('subscribe', form.form);
+  const hasCancer = useField('hasCancer', form.form);
   const connectExtProfile = useField('connectExtProfile', form.form);
   const importProfilePicture = useField('importProfilePicture', form.form);
 
@@ -273,6 +276,21 @@ export default memo(function SignupForm({ invitationId = null, lang = 'en' }) {
             </label>
           </div>
         )}
+
+        <div className={groupErrClass(subscribe, 'checkbox')}>
+          <label>
+            <input
+              type="checkbox"
+              value="1"
+              checked={subscribe.input.value}
+              {...subscribe.input}
+            />{' '}
+            {enRu(
+              'Subscribe to recommended users and groups',
+              'Подписаться на рекомендованных пользователей и группы',
+            )}
+          </label>
+        </div>
 
         {extProfile && (
           <div className={groupErrClass(connectExtProfile, 'checkbox')}>
