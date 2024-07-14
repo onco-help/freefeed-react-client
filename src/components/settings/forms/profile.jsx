@@ -35,6 +35,7 @@ export default function ProfileForm() {
   const email = useField('email', form.form);
   const emailCode = useField('emailCode', form.form);
   const description = useField('description', form.form);
+  const hasCancer = useField('hasCancer', form.form);
 
   return (
     <form onSubmit={form.handleSubmit}>
@@ -77,6 +78,15 @@ export default function ProfileForm() {
         />
       </div>
 
+      <div className={groupErrClass(hasCancer)}>
+        <label htmlFor="description-input">Has been diagnosed with cancer</label>
+        <textarea
+          id="hasCancer-input"
+          className={`form-control wider-input ${styles.hasCancer}`}
+          {...hasCancer.input}
+        />
+      </div>
+
       <div className="form-group">
         <button
           className="btn btn-primary"
@@ -107,6 +117,7 @@ function initialValues(userData) {
     email: userData.email || '',
     emailCode: '',
     description: userData.description || '',
+    hasCancer: userData.hasCancer || false,
   };
 }
 

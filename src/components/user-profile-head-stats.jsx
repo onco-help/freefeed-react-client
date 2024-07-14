@@ -17,7 +17,7 @@ export const UserProfileHeadStats = ({ user, canFollowStatLinks }) => {
   const invitedBy = useSelector((state) => state.invitedByMap[user.username]);
   const waiting = useWaiting(1000);
 
-  const { username, createdAt, type } = user;
+  const { username, createdAt, type, hasCancer } = user;
 
   // Longest (in decimal digits) value of stats
   const maxDigits = useMemo(
