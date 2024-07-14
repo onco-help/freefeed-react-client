@@ -24,12 +24,12 @@ export const UserProfileHeadStats = ({ user, canFollowStatLinks }) => {
     () =>
       loadStatus.success
         ? Object.keys(statistics).reduce((acc, key) => {
-            if (statistics[key] === null) {
-              return acc;
-            }
-            const len = statistics[key].toString(10).length;
-            return Math.max(len, acc);
-          }, 0)
+          if (statistics[key] === null) {
+            return acc;
+          }
+          const len = statistics[key].toString(10).length;
+          return Math.max(len, acc);
+        }, 0)
         : 0,
     [loadStatus.success, statistics],
   );
@@ -101,6 +101,15 @@ export const UserProfileHeadStats = ({ user, canFollowStatLinks }) => {
             </span>
           </li>
         )}
+        <li className={styles.statlink}>
+          <span className={styles.statlinkText}>
+            {hasCancer &&
+              <span className={styles.invitedBy}>Cancer</span>
+              ||
+              <span className={styles.invitedBy}>No cancer</span>
+            }
+          </span>
+        </li>
       </ul>
     </div>
   );
