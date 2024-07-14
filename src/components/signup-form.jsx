@@ -277,17 +277,17 @@ export default memo(function SignupForm({ invitationId = null, lang = 'en' }) {
           </div>
         )}
 
-        <div className={groupErrClass(subscribe, 'checkbox')}>
+        <div className={groupErrClass(hasCancer, 'checkbox')}>
           <label>
             <input
               type="checkbox"
               value="1"
-              checked={subscribe.input.value}
-              {...subscribe.input}
+              checked={hasCancer.input.value}
+              {...hasCancer.input}
             />{' '}
             {enRu(
-              'Subscribe to recommended users and groups',
-              'Подписаться на рекомендованных пользователей и группы',
+              'I had been diagnosed with cancer',
+              'У меня был диагностирован рак',
             )}
           </label>
         </div>
