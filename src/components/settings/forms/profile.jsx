@@ -79,8 +79,12 @@ export default function ProfileForm() {
       </div>
 
       <div className={groupErrClass(hasCancer)}>
-        <label htmlFor="description-input">Has been diagnosed with cancer</label>
-        <CheckboxInput field={hasCancer} disabled />
+        <div className="checkbox">
+          <label>
+            <CheckboxInput field={hasCancer} disabled />
+            Has been diagnosed with cancer
+          </label>
+        </div>
       </div>
 
       <div className="form-group">
