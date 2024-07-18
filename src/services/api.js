@@ -328,7 +328,7 @@ export function updateUserPicture({ picture }) {
   const data = new FormData();
   data.append('file', picture);
 
-  return fetch(`${apiRoot}/v1/users/updateProfilePicture`, {
+  return fetch(`${apiRoot}/v2/users/updateProfilePicture`, {
     method: 'POST',
     headers: { 'X-Authentication-Token': getToken() },
     body: data,
