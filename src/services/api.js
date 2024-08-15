@@ -397,6 +397,10 @@ export function getSubscriptions({ username }) {
   return fetch(`${apiRoot}/v2/users/${username}/subscriptions`, getRequestOptions());
 }
 
+export function getChatbotMessages() {
+  return fetch(`${apiRoot}/v2/chatbot`, getRequestOptions());
+}
+
 export function getUserInfo({ username }) {
   return fetch(`${apiRoot}/v2/users/${username}`, getRequestOptions());
 }

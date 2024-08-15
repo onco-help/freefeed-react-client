@@ -1,9 +1,9 @@
 {
   "api": {
-    "root": "http://localhost:3000"
+    "root": "https://oh-server.c.rkd.pw"
   },
   "siteTitle": "OncoHelp",
-  "siteOrigin": "http://localhost:3000",
+  "siteOrigin": "https://oh-client.c.rkd.pw",
   "auth": {
     "tokenPrefix": "oh_",
     "userStorageKey": "USER_KEY"
@@ -15,7 +15,7 @@
     "searchEngine": null
   },
   "siteDomains": [
-    "localhost:3000"
+    "oh-server.c.rkd.pw"
   ],
   "sentry": {
     "publicDSN": null

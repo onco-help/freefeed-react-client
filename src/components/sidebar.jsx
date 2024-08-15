@@ -5,7 +5,6 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { htmlSafe } from '../utils';
 import { listHomeFeeds, openSidebar, setUserColorScheme } from '../redux/action-creators';
 import {
   SCHEME_DARK,
@@ -13,7 +12,6 @@ import {
   SCHEME_LIGHT,
   systemColorSchemeSupported,
 } from '../services/appearance';
-import { bookmarkletHref } from '../bookmarklet/loader';
 import UserName from './user-name';
 import RecentGroups from './recent-groups';
 import ErrorBoundary from './error-boundary';
@@ -26,7 +24,6 @@ import { DonationWidget } from './donation-widget';
 import { useMediaQuery } from './hooks/media-query';
 import { useResizing } from './hooks/resizing';
 import { Icon } from './fontawesome-icons';
-import { SideBarMemories } from './sidebar-memories';
 import { WithDraftsCount } from './post/draft-with-count';
 
 function LoggedInBlock({ user, signOut }) {
@@ -120,7 +117,7 @@ const SideBarFriends = ({ user }) => {
               </WithDraftsCount>
             </li>
             <li className="p-roadmap">
-              <Link to="/roadmap">Roadmap</Link>
+              <Link to="/chatbot">Roadmap</Link>
             </li>
           </ul>
         </div>

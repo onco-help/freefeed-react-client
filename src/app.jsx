@@ -83,6 +83,9 @@ const inviteActions = () => {
   store.dispatch(ActionCreators.subscriptions(username));
   store.dispatch(ActionCreators.getInvitationsInfo());
 };
+const chatbotActions = () => {
+  store.dispatch(ActionCreators.getChatbotMessages());
+};
 
 // needed to display mutual friends
 const subscribersSubscriptionsActions = (next, replace) => {
@@ -308,6 +311,12 @@ function App() {
           path="/archivePost"
           component={lazyLoad(() => import('./components/archive-post'))}
           {...generateRouteHooks(boundRouteActions('archivePost'))}
+        />
+        <Route
+          name="chatbot"
+          path="/chatbot"
+          component={lazyLoad(() => import('./components/chatbot'))}
+          onEnter={chatbotActions}
         />
         <Route
           name="createInvitation"

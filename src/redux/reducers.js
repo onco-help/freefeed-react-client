@@ -1973,6 +1973,7 @@ export function uiScale(state = loadUIScale(), action) {
 
 export { settingsForms } from './reducers/settings-forms';
 export { appTokens } from './reducers/app-tokens';
+export { chatbotMessages } from './reducers/chatbot';
 export { serverInfo, serverInfoStatus } from './reducers/server-info';
 export { extAuth } from './reducers/ext-auth.js';
 

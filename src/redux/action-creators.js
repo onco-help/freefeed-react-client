@@ -652,6 +652,14 @@ export function subscriptions(username) {
   };
 }
 
+export function getChatbotMessages() {
+  return {
+    type: ActionTypes.CHATBOT_MESSAGES,
+    apiRequest: Api.getChatbotMessages,
+    payload: {},
+  };
+}
+
 export function getUserInfo(username, extra = {}) {
   return {
     type: ActionTypes.GET_USER_INFO,
