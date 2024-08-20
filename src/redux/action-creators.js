@@ -660,6 +660,14 @@ export function getChatbotMessages() {
   };
 }
 
+export function sendChatbotMessage(input) {
+  return {
+    type: ActionTypes.CHATBOT_MESSAGES,
+    apiRequest: Api.sendChatbotMessage,
+    payload: { input },
+  };
+}
+
 export function getUserInfo(username, extra = {}) {
   return {
     type: ActionTypes.GET_USER_INFO,

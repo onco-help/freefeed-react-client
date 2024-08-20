@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getChatbotMessages } from '../redux/action-creators';
+import { getChatbotMessages, sendChatbotMessage } from '../redux/action-creators';
 import ErrorBoundary from './error-boundary';
 
 function withLayout(Component) {
@@ -24,11 +24,38 @@ function withLayout(Component) {
 export default withLayout(function RoadmapChatbot() {
   const dispatch = useDispatch();
   const chatbotMessages = useSelector((state) => state.chatbotMessages);
-  const buttons = ['Yes', 'No'];
+  const lastMessage = useSelector((state) =>
+    state.chatbotMessages.length > 0 ? state.chatbotMessages[state.chatbotMessages.length - 1] : {},
+  );
+  const buttons = useSelector(() => (lastMessage.Buttons ? JSON.parse(lastMessage.Buttons) : []));
   const status = useSelector((state) => state.appTokens.chatbotMessagesStatus || {});
-  const input = '';
+  const [value, setValue] = useState('');
 
   useEffect(() => void dispatch(getChatbotMessages()), [dispatch]);
+
+  const sendInput = (v) => {
+    if (!v) {
+      return;
+    }
+
+    dispatch(sendChatbotMessage(v));
+    dispatch(getChatbotMessages());
+    setValue('');
+
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
+  const clickButton = useCallback((buttonEvent) => {
+    sendInput(buttonEvent.target.innerText);
+  });
+
+  const clickSend = useCallback(() => {
+    sendInput(value);
+  });
+
+  const changeInput = useCallback((e) => {
+    setValue(e.target.value);
+  });
 
   if (status.loading || status.initial) {
     return <p>Loading...</p>;
@@ -42,35 +69,41 @@ export default withLayout(function RoadmapChatbot() {
     return <p>No messages</p>;
   }
 
+  setTimeout(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, 100);
+
   return (
     <div className="roadmap">
       <div className="discussion">
         {chatbotMessages.map((msg, idx) => (
-          <div key={idx} className={`bubble ${msg.role == 'assistant' ? 'sender' : 'recipient'}`}>
-            {msg.content}
+          <div key={idx} className={`bubble ${msg.Author == 'bot' ? 'sender' : 'recipient'}`}>
+            {msg.Message}
           </div>
         ))}
 
         {buttons.length > 0 ? (
           <div className="button-options">
-            {buttons.map((btn, idx) => {
-              <button className="btn btn-sm btn-info" key={idx}>
-                {btn}
-              </button>;
-            })}
+            {buttons.map((button, idx) => (
+              <button key={idx} className="btn btn-sm btn-info" onClick={clickButton}>
+                {button}
+              </button>
+            ))}
           </div>
         ) : (
-          ''
+          <div className="input-area">
+            <input
+              type="text"
+              className="form-control"
+              value={value}
+              onChange={changeInput}
+              placeholder="Type your message..."
+            />
+            <button className="btn btn-sm btn-info" onClick={clickSend}>
+              Send
+            </button>
+          </div>
         )}
-        <div className="input-area">
-          <input
-            type="text"
-            className="form-control"
-            value={input}
-            placeholder="Type your message..."
-          />
-          <button className="btn btn-sm btn-info">Send</button>
-        </div>
       </div>
     </div>
   );
