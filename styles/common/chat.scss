@@ -2,24 +2,32 @@
   margin: 1em 0;
 
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  max-height: 800px;
+  overflow-y: scroll;
 }
 
 .discussion > .bubble {
   border-radius: 1em;
-  padding: 0.25em 0.75em;
+  padding: 0.5em 0.75em;
   margin: 0.0625em;
   max-width: 50%;
 }
 
 .discussion > .bubble.sender {
   align-self: flex-start;
-  background-color: cornflowerblue;
-  color: #fff;
+  background-color: #a8c1ee;
 }
 .discussion > .bubble.recipient {
   align-self: flex-end;
   background-color: #efefef;
+}
+
+.dark-theme .discussion > .bubble.sender {
+  background-color: #104cb9;
+}
+.dark-theme .discussion > .bubble.recipient {
+  background-color: #424242;
 }
 
 .discussion > .bubble.sender.first {
@@ -47,10 +55,16 @@
 .discussion .button-options {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 0.5em 0 0.5em 0;
 }
 
 .discussion .button-options .btn {
   margin: 0 0.5em 0 0;
+}
+
+.dark-theme .discussion .button-options .btn {
+  background-color: #292f8c;
+  border-color: #292f8c;
+  color: #b3b3b3;
 }

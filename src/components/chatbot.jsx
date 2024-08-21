@@ -70,7 +70,7 @@ export default withLayout(function RoadmapChatbot() {
   }
 
   setTimeout(() => {
-    window.scrollTo(0, document.body.scrollHeight);
+    document.querySelectorAll('.discussion')[0].scrollTo({ top: 1000000 });
   }, 100);
 
   return (
