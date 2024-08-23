@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Markdown from 'react-markdown';
 import { getChatbotMessages, sendChatbotMessage } from '../redux/action-creators';
 import ErrorBoundary from './error-boundary';
 
@@ -78,7 +79,7 @@ export default withLayout(function RoadmapChatbot() {
       <div className="discussion">
         {chatbotMessages.map((msg, idx) => (
           <div key={idx} className={`bubble ${msg.Author == 'bot' ? 'sender' : 'recipient'}`}>
-            {msg.Message}
+            <Markdown>{msg.Message}</Markdown>
           </div>
         ))}
 

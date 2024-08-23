@@ -33,6 +33,7 @@
     "react-final-form-hooks": "~2.0.2",
     "react-google-recaptcha": "~3.1.0",
     "react-helmet": "~6.1.0",
+    "react-markdown": "^9.0.1",
     "react-portal": "~4.2.2",
     "react-redux": "~9.1.2",
     "react-router": "~3.2.6",
