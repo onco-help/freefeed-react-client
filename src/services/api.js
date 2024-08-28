@@ -405,6 +405,10 @@ export function sendChatbotMessage(input) {
   return fetch(`${apiRoot}/v2/chatbot`, postRequestOptions('POST', input));
 }
 
+export function resetChatbot() {
+  return fetch(`${apiRoot}/v2/chatbot/reset`, postRequestOptions('POST', {}));
+}
+
 export function getUserInfo({ username }) {
   return fetch(`${apiRoot}/v2/users/${username}`, getRequestOptions());
 }

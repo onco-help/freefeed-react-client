@@ -668,6 +668,14 @@ export function sendChatbotMessage(input) {
   };
 }
 
+export function resetChatbot() {
+  return {
+    type: ActionTypes.CHATBOT_RESET,
+    apiRequest: Api.resetChatbot,
+    payload: {},
+  };
+}
+
 export function getUserInfo(username, extra = {}) {
   return {
     type: ActionTypes.GET_USER_INFO,

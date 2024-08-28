@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Markdown from 'react-markdown';
-import { getChatbotMessages, sendChatbotMessage } from '../redux/action-creators';
+import { getChatbotMessages, sendChatbotMessage, resetChatbot } from '../redux/action-creators';
 import ErrorBoundary from './error-boundary';
 
 function withLayout(Component) {
@@ -58,16 +58,9 @@ export default withLayout(function RoadmapChatbot() {
     setValue(e.target.value);
   });
 
-  const resetChatbot = useCallback(() => {
-    fetch('/chatbot/reset', { method: 'POST' })
-      .then((response) => response.json())
-      .then(() => {
-        dispatch(getChatbotMessages());
-        return {};
-      })
-      .catch((error) => {
-        console.error('Error resetting chatbot:', error);
-      });
+  const reset = useCallback(() => {
+    dispatch(resetChatbot());
+    dispatch(getChatbotMessages());
   });
 
   if (status.loading || status.initial) {
@@ -119,7 +112,7 @@ export default withLayout(function RoadmapChatbot() {
         )}
 
         <div className="reset-button">
-          <button className="btn btn-sm btn-warning" onClick={resetChatbot}>
+          <button className="btn btn-sm btn-warning" onClick={reset}>
             Reset
           </button>
         </div>
