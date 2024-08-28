@@ -63,11 +63,14 @@ export default withLayout(function RoadmapChatbot() {
       .then((response) => response.json())
       .then(() => {
         dispatch(getChatbotMessages());
+        return {};
       })
       .catch((error) => {
         console.error('Error resetting chatbot:', error);
       });
   });
+
+  if (status.loading || status.initial) {
     return <p>Loading...</p>;
   }
 
@@ -114,6 +117,7 @@ export default withLayout(function RoadmapChatbot() {
             </button>
           </div>
         )}
+
         <div className="reset-button">
           <button className="btn btn-sm btn-warning" onClick={resetChatbot}>
             Reset
