@@ -60,6 +60,7 @@ export default withLayout(function RoadmapChatbot() {
 
   const reset = useCallback(() => {
     dispatch(resetChatbot());
+    setValue('');
     dispatch(getChatbotMessages());
   });
 
